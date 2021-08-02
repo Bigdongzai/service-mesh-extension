@@ -2,6 +2,7 @@ package db
 
 import (
 	"fmt"
+	"log"
 
 	"github.com/jinzhu/gorm"
 )
@@ -29,7 +30,7 @@ func GetDb() (conn *gorm.DB) {
 		if conn != nil {
 			break
 		}
-		fmt.Println("本次未获取到mysql连接")
+		log.Print("本次未获取到mysql连接")
 	}
 	return conn
 }
