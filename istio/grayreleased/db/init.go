@@ -26,7 +26,7 @@ func dbConn(User, Password, Host, Db string, Port int) *gorm.DB {
 
 func GetDb() (conn *gorm.DB) {
 	for {
-		conn = dbConn("root", "1daoyun", "k8s-istio.mysql.rds.aliyuncs.com", "istio", 3306)
+		conn = dbConn("root", "#1daoyun", "k8s-istio.mysql.rds.aliyuncs.com", "istio", 3306)
 		if conn != nil {
 			break
 		}

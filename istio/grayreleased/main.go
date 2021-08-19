@@ -45,5 +45,6 @@ func GetDb() (conn *gorm.DB) {
 
 func main() {
 	conn := GetDb()
-	conn.Table("t_task").CreateTable(&Task{})
+	conn.Where("id=2").Find(&[]Task{})
+	//conn.Table("task").CreateTable(&Task{})
 }

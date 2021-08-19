@@ -8,7 +8,7 @@ import (
 
 type Task struct {
 	gorm.Model
-	Name     string `json:"name"`
+	Name     string `json:"name" description:"任务名称"`
 	Service  string `json:"service"`
 	Version  string `json:"version"`
 	Describe string `json:"describe"`
